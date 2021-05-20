@@ -1,0 +1,134 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.navbar {
+    border-bottom: 5px solid #007bff;
+    margin-bottom: 40px;
+}
+
+
+nav{
+    text-align: center;
+
+}
+nav div a {
+    font-size: 2em;
+    padding:  0em 6em;
+}
+
+nav .navbar-brand{
+    font-size: 4em;
+}
+
+div.buffer {
+    background-color:white;
+    position:fixed;
+
+
+}
+
+
+.tables-div {
+
+    padding: 5% 15%;
+    border:50px;
+    border-color: white ;
+}
+
+div.card{
+    border-width: .1em;
+    border-color:white;
+    background: rgba(255, 255, 255, 0.481);
+}
+ div.col-sm-6{
+    padding: .5em;
+    text-align: center;
+    opacity: 100%;
+}
+
+h5.card-title{
+    
+    opacity: 200%;
+
+}
+
+footer {
+  padding: 2em 0;
+  width: 100%;
+  text-align: center;
+  background: #d3d3d3;
+}
+
+footer .nav-ul {justify-content: center;margin-bottom: 1em;}
+footer li:not(:first-child) {margin-left: 1.5em;}
+footer li:first-child a {color: #333;}
+footer a {
+  font-size: 1em;
+  font-weight: bold;
+  color: #a9a9a9;
+
+}
+.copy {font-size: .85em;}
+
+
+
+div.inputs {
+    padding: 5% 15%;
+    border:50px;
+    border-color: white ;
+
+}
+
+form{
+    border: 5px solid  white;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.481);
+    text-align: center;
+}
+
+
+form h1{
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    border: 10x solid rgba(255, 255, 255, 0.481);
+
+}
+.form-group{
+    margin: 1em;
+    border-width: .1em;
+    border-color:white;
+    
+    text-align: center;
+}
+
+.Table{
+    border: 5px solid white;
+    border-color:white;
+    background: rgba(255, 255, 255, 0.481);
+    text-align: center;
+    padding: 5% 15%;
+}
+
+.Table .table-header{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
