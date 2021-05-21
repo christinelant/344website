@@ -14,12 +14,10 @@ CREATE TABLE `orders` (
   `orderID` int(11) NOT NULL AUTO_INCREMENT,
   `dateOrdered` DATE,
   `orderedBy` varchar(255),
-  # gave me trouble if i left this as customerID, likewise with next table
-  
   `employeeID` int(11),
 
   PRIMARY KEY (`orderID`)
-  KEY `customerID` (`customerID`),
+  KEY `orderedBy` (`orderedBy`),
   CONSTRAINT `orders_fk` FOREIGN KEY (`orderedBy`) REFERENCES `customers` (`customerID`)
   CONSTRAINT `employees_fk` FOREIGN KEY (`employee`) REFERENCES `employees` (`employeeID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
@@ -47,19 +45,49 @@ CREATE TABLE `payments` (
 -- Employees ---------------------
 
 CREATE TABLE `employees` (
-    `paymentID` INT(11) NOT NULL AUTO_INCREMENT,
-    `paidBy` INT(11),
-    `amountPaid` decimal(10,2) NOT NULL,
-    `datePaid` DATE NOT NULL,
-    `paymentType` TEXT NOT NULL,
+  `employeeID` INT(11) NOT NULL AUTO_INCREMENT,
+  `paidBy` INT(11),
+  `amountPaid` decimal(10,2) NOT NULL,
+  `datePaid` DATE NOT NULL,
+  `paymentType` TEXT NOT NULL,
     
-    PRIMARY KEY(`paymentID`)
-    KEY `paidBy` (`paidBy`),
-    CONSTRAINT `payment_fk` FOREIGN KEY (`paidBy`) REFERENCES `customers` (`customerID`)
+  PRIMARY KEY(`paymentID`)
+  KEY `paidBy` (`paidBy`),
+  CONSTRAINT `payment_fk` FOREIGN KEY (`paidBy`) REFERENCES `customers` (`customerID`)
 
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
 
+------------------------------------------
+
+
+-- EmployeeOrders ---------------------
+
+CREATE TABLE `employeeOrders` (
+  `employeeID_fk` INT(11) NOT NULL AUTO_INCREMENT,
+  `orderID_fk` INT(11),
+
+  CONSTRAINT `employee_fk` FOREIGN KEY (`employeeID_fk`) REFERENCES `employees` (`employeeID`)
+  CONSTRAINT `order_fk` FOREIGN KEY (`orderID_fk`) REFERENCES `orders` (`orderID`)
+
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+
+------------------------------------------
+
+-- customers ---------------------
+
+CREATE TABLE `orders` (
+  `orderID` int(11) NOT NULL AUTO_INCREMENT,
+  `dateOrdered` DATE,
+  `orderedBy` varchar(255),
+  `employeeID` int(11),
+
+  PRIMARY KEY (`orderID`)
+  KEY `orderedBy` (`orderedBy`),
+  CONSTRAINT `orders_fk` FOREIGN KEY (`orderedBy`) REFERENCES `customers` (`customerID`)
+  CONSTRAINT `employees_fk` FOREIGN KEY (`employee`) REFERENCES `employees` (`employeeID`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 ------------------------------------------
 
 # insert data into tables
