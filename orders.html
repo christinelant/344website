@@ -44,8 +44,13 @@
           <input type="text" class="form-control" id="dateOrdered" placeholder="Enter Date Ordered">
         </div>
         <div class="form-group">
-          <label for="customerID">Customer ID</label>
-          <input type="number" class="form-control" id="customerID" placeholder="Customer ID">
+          <label for="customerID">OrderedBy</label>
+          <input type="number" class="form-control" id="orderedBy" placeholder="Customer ID">
+        </div>
+
+        <div class="form-group">
+          <label for="customerID">Employee ID</label>
+          <input type="number" class="form-control" id="employeeID" placeholder="Customer ID">
         </div>
         <button type="submit" class="btn btn-primary">Add New Orders</button>
       </form>
@@ -64,15 +69,17 @@
           <tr>
             <th scope="col">Order ID</th>
             <th scope="col">Date Ordered</th>
-            <th scope="col">Customer ID</th>
+            <th scope="col">OrderedBy</th>
+            <th scope="col">Employee ID</th>
           </tr>
         </thead>
 
         <tbody>
           <tr>
-            <th scope="row">7</th>
+            <th scope="row">1</th>
             <td>2021/02/12</td>
-            <td>3</td>
+            <td>7</td>
+            <td>1</td>
             <td><button type="submit" class="btn btn-primary">Edit</button></td>
             <td><button type="submit" class="btn btn-primary">Delete</button></td>
           </tr>
@@ -80,15 +87,17 @@
           <tr>
             <th scope="row">2</th>
             <td>2020/04/12</td>
-            <td>132432534</td>
+            <td>2</td>
+            <td>1</td>
             <td><button type="submit" class="btn btn-primary">Edit</button></td>
             <td><button type="submit" class="btn btn-primary">Delete</button></td>
           </tr>
 
           <tr>
-            <th scope="row">2</th>
-            <td>2021/02/12</td>
-            <td>8</td>
+            <th scope="row">3</th>
+            <td>2021/04/28</td>
+            <td>2</td>
+            <td>3</td>
             <td><button type="submit" class="btn btn-primary">Edit</button></td>
             <td><button type="submit" class="btn btn-primary">Delete</button></td>
           </tr>
