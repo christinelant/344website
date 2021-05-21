@@ -51,19 +51,19 @@ INSERT INTO `customers` (`customerID`, `firstName`, `lastName`, `phone`, `email`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employeeOrders`
+-- Table structure for table `employeeorder`
 --
 
-CREATE TABLE `employeeOrders` (
+CREATE TABLE `employeOorder` (
   `employeeID_fk` int(11) NOT NULL,
   `orderID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `employeeOrders`
+-- Dumping data for table `employeeorder`
 --
 
-INSERT INTO `employeeOrders` (`employeeID_fk`, `orderID_fk`) VALUES
+INSERT INTO `employeeOrder` (`employeeID_fk`, `orderID_fk`) VALUES
 (2, 3),
 (3, 2),
 (2, 1);
@@ -71,10 +71,10 @@ INSERT INTO `employeeOrders` (`employeeID_fk`, `orderID_fk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Employees`
+-- Table structure for table `employees`
 --
 
-CREATE TABLE `Employees` (
+CREATE TABLE `employees` (
   `employeeID` int(11) NOT NULL,
   `eFirstName` text NOT NULL,
   `eLastName` text DEFAULT NULL,
@@ -82,10 +82,10 @@ CREATE TABLE `Employees` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `Employees`
+-- Dumping data for table `employees`
 --
 
-INSERT INTO `Employees` (`employeeID`, `eFirstName`, `eLastName`, `eEmail`) VALUES
+INSERT INTO `employees` (`employeeID`, `eFirstName`, `eLastName`, `eEmail`) VALUES
 (1, 'Bill', 'Bob', 'blbob@luigis.com'),
 (2, 'Rose', 'Flower', 'patrick@luigis.com'),
 (3, 'Patrick', '', 'patrick@luigis.com');
@@ -93,10 +93,10 @@ INSERT INTO `Employees` (`employeeID`, `eFirstName`, `eLastName`, `eEmail`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Orders`
+-- Table structure for table `order`
 --
 
-CREATE TABLE `Orders` (
+CREATE TABLE `order` (
   `orderID` int(11) NOT NULL,
   `dateOrdered` date NOT NULL,
   `orderedBy` int(11) NOT NULL,
@@ -104,10 +104,10 @@ CREATE TABLE `Orders` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `Orders`
+-- Dumping data for table `order`
 --
 
-INSERT INTO `Orders` (`orderID`, `dateOrdered`, `orderedBy`, `employeeID`) VALUES
+INSERT INTO `order` (`orderID`, `dateOrdered`, `orderedBy`, `employeeID`) VALUES
 (1, '2021-02-12', 7, 1),
 (2, '2020-04-12', 2, 1),
 (3, '2021-04-28', 2, 3);
@@ -147,23 +147,23 @@ ALTER TABLE `customers`
   ADD UNIQUE KEY `customerID` (`customerID`);
 
 --
--- Indexes for table `employeeOrders`
+-- Indexes for table `employeeorder`
 --
-ALTER TABLE `employeeOrders`
+ALTER TABLE `employeeOrder`
   ADD KEY `employeeID_fk` (`employeeID_fk`) USING BTREE,
   ADD KEY `orderID_fk` (`orderID_fk`) USING BTREE;
 
 --
--- Indexes for table `Employees`
+-- Indexes for table `employees`
 --
-ALTER TABLE `Employees`
+ALTER TABLE `employees`
   ADD PRIMARY KEY (`employeeID`),
   ADD UNIQUE KEY `employeeID` (`employeeID`);
 
 --
--- Indexes for table `Orders`
+-- Indexes for table `order`
 --
-ALTER TABLE `Orders`
+ALTER TABLE `order`
   ADD PRIMARY KEY (`orderID`),
   ADD UNIQUE KEY `orderID` (`orderID`),
   ADD KEY `orderedBy` (`orderedBy`),
@@ -198,18 +198,18 @@ ALTER TABLE `payments`
 --
 
 --
--- Constraints for table `employeeOrders`
+-- Constraints for table `employeeorder`
 --
-ALTER TABLE `employeeOrders`
-  ADD CONSTRAINT `employeeOrders_ibfk_1` FOREIGN KEY (`employeeID_fk`) REFERENCES `Employees` (`employeeID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `employeeOrders_ibfk_2` FOREIGN KEY (`orderID_fk`) REFERENCES `Orders` (`orderID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `employeeorder`
+  ADD CONSTRAINT `employeeorder_ibfk_1` FOREIGN KEY (`employeeID_fk`) REFERENCES `employees` (`employeeID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `employeeorder_ibfk_2` FOREIGN KEY (`orderID_fk`) REFERENCES `order` (`orderID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `Orders`
+-- Constraints for table `order`
 --
-ALTER TABLE `Orders`
-  ADD CONSTRAINT `Orders_ibfk_1` FOREIGN KEY (`orderedBy`) REFERENCES `customers` (`customerID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `Orders_ibfk_2` FOREIGN KEY (`employeeID`) REFERENCES `Employees` (`employeeID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `order`
+  ADD CONSTRAINT `order_ibfk_1` FOREIGN KEY (`orderedBy`) REFERENCES `customers` (`customerID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `order_ibfk_2` FOREIGN KEY (`employeeID`) REFERENCES `employees` (`employeeID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `payments`
