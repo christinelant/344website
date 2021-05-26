@@ -54,7 +54,7 @@ INSERT INTO `customers` (`customerID`, `firstName`, `lastName`, `phone`, `email`
 -- Table structure for table `employeeorder`
 --
 
-CREATE TABLE `employeOorder` (
+CREATE TABLE `employeeOrder` (
   `employeeID_fk` int(11) NOT NULL,
   `orderID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -200,7 +200,7 @@ ALTER TABLE `payments`
 --
 -- Constraints for table `employeeorder`
 --
-ALTER TABLE `employeeorder`
+ALTER TABLE `employeeOrder`
   ADD CONSTRAINT `employeeorder_ibfk_1` FOREIGN KEY (`employeeID_fk`) REFERENCES `employees` (`employeeID`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `employeeorder_ibfk_2` FOREIGN KEY (`orderID_fk`) REFERENCES `order` (`orderID`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
