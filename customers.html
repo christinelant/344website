@@ -1,167 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css">
-
-  <title>Luigi's Pizza</title>
-</head>
-<nav id=rounded class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="./index.html">Luigi's Pizza</a>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="./customers.html">Customers <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="./orders.html">Orders</a>
-      <a class="nav-item nav-link" href="./payments.html">Payments</a>
-      <a class="nav-item nav-link" href="./employees.html">Employees</a>
-      <a class="nav-item nav-link" href="./employeeOrders.html">EmployeeOrders</a>
-
-    </div>
-  </div>
-</nav>
-
-<body>
-
-  <div class="main">
-    <div class="inputs">
-      <form>
-        <H1>Customers</H1>
-
-        <div class="form-group">
-          <label for="firstname">First Name</label>
-          <input type="text" class="form-control" id="firstname" placeholder="Enter First Name">
-        </div>
-        <div class="form-group">
-          <label for="lastname">Last Name</label>
-          <input type="text" class="form-control" id="lastname" placeholder="Enter Last Name">
-        </div>
-        <div class="form-group">
-          <label for="phonenumber">Phone Number</label>
-          <input type="tel" class="form-control" id="phonenumber" placeholder="Enter Phone">
+        <title>Luigi's Pizza</title>
+    </head>
+    <body>
+        <div class="wrapper nav-wrapper">
+            <div class="container nav-container">
+                <nav>
+                    <a href="/">
+                        <div class="name-container">
+                            <img src="./pizza.png" />
+                            <h1>Luigi's Pizza</h1>
+                        </div>
+                    </a>
+                    <div class="links-container">
+                        <a href="./customers.html">Customers</a>
+                        <a href="./orders.html">Orders</a>
+                        <a href="./payments.html">Payments</a>
+                        <a href="./employees.html">Employees</a>
+                        <a href="./employeeOrders.html">Employee Orders</a>
+                    </div>
+                </nav>
+            </div>
         </div>
 
-        <div class="form-group">
-          <label for="emailAddress">Email Address</label>
-          <input type="email" class="form-control" id="emailAddress" aria-describedby="emailHelp"
-            placeholder="Enter Email">
+        <div class="main">
+            <div class="inputs">
+                <form>
+                    <h1>Customers</h1>
+
+                    <div class="form-group">
+                        <label for="firstname">First Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="firstname"
+                            placeholder="Enter First Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="lastname"
+                            placeholder="Enter Last Name"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="phonenumber">Phone Number</label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="phonenumber"
+                            placeholder="Enter Phone"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="emailAddress">Email Address</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="emailAddress"
+                            aria-describedby="emailHelp"
+                            placeholder="Enter Email"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="address"
+                            placeholder="Enter address"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="city"
+                            placeholder="Enter City"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="state"
+                            placeholder="Enter State"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="zipcode">Zip</label>
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="zipcode"
+                            placeholder="Enter Zipcode"
+                            type="int"
+                        />
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Add New Customer
+                    </button>
+                </form>
+            </div>
+
+            <div class="Table">
+                <div class="table-header">
+                    <h1>Customers Table</h1>
+                    <input
+                        type="text"
+                        class="search-bar"
+                        placeholder="Search for.."
+                    />
+                </div>
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Customer ID</th>
+                            <th scope="col">First Name</th>
+                            <th scope="col">Last Name</th>
+                            <th scope="col">Phone Number</th>
+                            <th scope="col">Email Address</th>
+                            <th scope="col">Address</th>
+                            <th scope="col">City</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Zip</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Joe</td>
+                            <td>Johnson</td>
+                            <td>1231231234</td>
+                            <td>joe@yahoo.com</td>
+                            <td>123 Street</td>
+                            <td>Kansas City</td>
+                            <td>MO</td>
+                            <td>64001</td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Edit
+                                </button>
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>Manny</td>
+                            <td>Pole</td>
+                            <td>777777777</td>
+                            <td>manny@gmail.com</td>
+                            <td>23 Hershey Street</td>
+                            <td>Lancaster</td>
+                            <td>PA</td>
+                            <td>12231</td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Edit
+                                </button>
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">10</th>
+                            <td>Mary</td>
+                            <td>Su</td>
+                            <td>221333444</td>
+                            <td>sumary@aim.com</td>
+                            <td>87 Maker Place</td>
+                            <td>Stricker City</td>
+                            <td>NY</td>
+                            <td>10510</td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Edit
+                                </button>
+                            </td>
+                            <td>
+                                <button type="submit" class="btn btn-primary">
+                                    Delete
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="form-group">
-          <label for="address">Address</label>
-          <input type="text" class="form-control" id="address" placeholder="Enter address">
-        </div>
-        <div class="form-group">
-          <label for="city">City</label>
-          <input type="text" class="form-control" id="city" placeholder="Enter City">
-        </div>
-        <div class="form-group">
-          <label for="state">State</label>
-          <input type="text" class="form-control" id="state" placeholder="Enter State">
-        </div>
-        <div class="form-group">
-          <label for="zipcode">Zip</label>
-          <input type="number" class="form-control" id="zipcode" placeholder="Enter Zipcode" type="int">
-        </div>
-        <button type="submit" class="btn btn-primary">Add New Customer</button>
-      </form>
 
-    </div>
-
-    <div class="Table">
-      <div class='table-header'>
-        <h1>Customers Table</h1>
-        <input type='text' class='search-bar' placeholder='Search for..'>
-      </div>
-
-      <table class="table table-dark">
-
-        <thead>
-          <tr>
-            <th scope="col">Customer ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Phone Number</th>
-            <th scope="col">Email Address</th>
-            <th scope="col">Address</th>
-            <th scope="col">City</th>
-            <th scope="col">State</th>
-            <th scope="col">Zip</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <th scope="row">2</th>
-            <td>Joe</td>
-            <td>Johnson</td>
-            <td>1231231234</td>
-            <td>joe@yahoo.com</td>
-            <td>123 Street</td>
-            <td>Kansas City</td>
-            <td>MO</td>
-            <td>64001</td>
-            <td><button type="submit" class="btn btn-primary">Edit</button></td>
-            <td><button type="submit" class="btn btn-primary">Delete</button></td>
-          </tr>
-
-          <tr>
-            <th scope="row">7</th>
-            <td>Manny</td>
-            <td>Pole</td>
-            <td>777777777</td>
-            <td>manny@gmail.com</td>
-            <td>23 Hershey Street</td>
-            <td>Lancaster</td>
-            <td>PA</td>
-            <td>12231</td>
-            <td><button type="submit" class="btn btn-primary">Edit</button></td>
-            <td><button type="submit" class="btn btn-primary">Delete</button></td>
-          </tr>
-
-          <tr>
-            <th scope="row">10</th>
-            <td>Mary</td>
-            <td>Su</td>
-            <td>221333444</td>
-            <td>sumary@aim.com</td>
-            <td>87 Maker Place</td>
-            <td>Stricker City</td>
-            <td>NY</td>
-            <td>10510</td>
-            <td><button type="submit" class="btn btn-primary">Edit</button></td>
-            <td><button type="submit" class="btn btn-primary">Delete</button></td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-  </div>
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-</body>
-
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>

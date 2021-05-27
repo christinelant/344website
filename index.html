@@ -1,19 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
 
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="index.css" />
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="index.css">
+        <title>Luigi's Pizza</title>
+    </head>
 
-  <title>Luigi's Pizza</title>
-</head>
-<nav id=rounded class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <nav id=rounded class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="./index.html">Luigi's Pizza</a>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -30,99 +37,133 @@
 
     </div>
   </div>
-</nav>
+</nav> -->
 
-<body>
-  <div class="main">
-
-
-    <!--https://getbootstrap.com/docs/4.0/components/card/-->
-    <div class=tables-div>
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Customers</h5>
-              <p class="card-text">Displays all customers that have made an account on Luigi’s Pizza’s website. Please
-                note, a customer does not have to order at Luigi’s to be part of this list.</p>
-              <p class="card-text"> You can view, edit, or create a new order here.</p>
-
-              <a href=" ./customers.html" class="btn btn-primary">View Customers Table</a>
+    <body>
+        <div class="wrapper nav-wrapper">
+            <div class="container nav-container">
+                <nav>
+                    <a href="/">
+                        <div class="name-container">
+                            <img src="./pizza.png" />
+                            <h1>Luigi's Pizza</h1>
+                        </div>
+                    </a>
+                    <div class="links-container">
+                        <a href="./customers.html">Customers</a>
+                        <a href="./orders.html">Orders</a>
+                        <a href="./payments.html">Payments</a>
+                        <a href="./employees.html">Employees</a>
+                        <a href="./employeeOrders.html">Employee Orders</a>
+                    </div>
+                </nav>
             </div>
-          </div>
         </div>
 
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Orders</h5>
-              <p class="card-text">Displays all orders placed by customers that have ordered from at Luigi's and
-                relevant
-                information pertaining to these orders.</p>
-
-              <p class="card-text"> You can view, edit, or create a new order here.</p>
-              <a href="./orders.html" class="btn btn-primary">View Orders Table</a>
+        <div class="main container">
+            <div class="card table-card">
+                <div class="card-body">
+                    <div class="card-header-container">
+                        <h5 class="card-title">Customers</h5>
+                        <a href=" ./customers.html">View Customers Table</a>
+                    </div>
+                    <p class="card-text card-desc">
+                        Displays all customers that have made an account on
+                        Luigi’s Pizza’s website. Please note, a customer does
+                        not have to order at Luigi’s to be part of this list.
+                    </p>
+                    <p class="card-text">
+                        You can view, edit, or create a new order here.
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Payments</h5>
-              <p class="card-text">Displays all of the payments received by Luigi’s.</p>
-              <p class="card-text"> You can view, edit, or create a new payment here.</p>
-              <a href="./payments.html" class="btn btn-primary">View Payments Table</a>
+            <div class="card table-card">
+                <div class="card-body">
+                    <div class="card-header-container">
+                        <h5 class="card-title">Orders</h5>
+                        <a href="./orders.html">View Orders Table</a>
+                    </div>
+                    <p class="card-text card-desc">
+                        Displays all orders placed by customers that have
+                        ordered from at Luigi's and relevant information
+                        pertaining to these orders.
+                    </p>
+
+                    <p class="card-text">
+                        You can view, edit, or create a new order here.
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
 
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Employee</h5>
-              <p class="card-text">Displays all of the combo menu items offered at Luigi's.</p>
-
-              <p class="card-text"> You can view, edit, or create a new menu item here.</p>
-              <a href="./employee.html" class="btn btn-primary">View Employee Table<a>
+            <div class="card table-card">
+                <div class="card-body">
+                    <div class="card-header-container">
+                        <h5 class="card-title">Payments</h5>
+                        <a href="./payments.html">View Payments Table</a>
+                    </div>
+                    <p class="card-text card-desc">
+                        Displays all of the payments received by Luigi’s.
+                    </p>
+                    <p class="card-text">
+                        You can view, edit, or create a new payment here.
+                    </p>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">EmployeeOrders</h5>
-              <p class="card-text">Intermediatry table that ties an employee or employees items to order ids (M:M
-                relationship).
-                Table will handle deletion between either table if an item is removed. </p>
+            <div class="card table-card">
+                <div class="card-body">
+                    <div class="card-header-container">
+                        <h5 class="card-title">Employee</h5>
+                        <a href="./employee.html">View Employee Table</a>
+                    </div>
+                    <p class="card-text card-desc">
+                        Displays all of the combo menu items offered at Luigi's.
+                    </p>
 
-              <p class="card-text">You can view, edit, or create a new relationship here.</p>
-              <a href="./employeeOrders.html" class="btn btn-primary">View EmployeeOrders Table</a>
+                    <p class="card-text">
+                        You can view, edit, or create a new menu item here.
+                    </p>
+                </div>
             </div>
-          </div>
+
+            <div class="card table-card">
+                <div class="card-body">
+                    <div class="card-header-container">
+                        <h5 class="card-title">EmployeeOrders</h5>
+                        <a href="./employeeOrders.html"
+                            >View Employee Orders Table</a
+                        >
+                    </div>
+                    <p class="card-text card-desc">
+                        Intermediatry table that ties an employee or employees
+                        items to order ids (M:M relationship). Table will handle
+                        deletion between either table if an item is removed.
+                    </p>
+
+                    <p class="card-text">
+                        You can view, edit, or create a new relationship here.
+                    </p>
+                </div>
+            </div>
         </div>
-      </div>
 
-    </div>
-
-  </div>
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-</body>
-
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
